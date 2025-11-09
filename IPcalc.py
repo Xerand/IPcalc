@@ -80,6 +80,7 @@ Md = int(Md, 2)
 print(f"  {giallo}{'Netmask:':<12}{verde}{'.'.join([str(Ma),str(Mb),str(Mc),str(Md)]):<16}{reset}{format(Ma, '08b')} {format(Mb, '08b')} {format(Mc, '08b')} {format(Md, '08b')}")
 
 if (cidr == 32):
+    input("  Press Enter to exit")
     exit
 else:
     ### Calcolo ID di rete
@@ -104,6 +105,7 @@ else:
     print(f"  {giallo}{'Broadcast:':<12}{verde}{'.'.join([str(Ba),str(Bb),str(Bc),str(Bd)]):<16}{reset}{format(Ba, '08b')} {format(Bb, '08b')} {format(Bc, '08b')} {format(Bd, '08b')}")
 
     if (cidr == 31):
+        input("  Press Enter to exit")
         exit
     else:
         ### Calcolo host
@@ -124,4 +126,5 @@ else:
         HMax_c = Bc
         HMax_d = Bd - 1
 
-        print(f"  {giallo}{'HostMax:':<12}{verde}{'.'.join([str(HMax_a),str(HMax_b),str(HMax_c),str(HMax_d)]):<16}{reset}{format(HMax_a, '08b')} {format(HMax_b, '08b')} {format(HMax_c, '08b')} {format(HMax_d, '08b')}\n")
+        print(f"  {giallo}{'HostMax:':<12}{verde}{'.'.join([str(HMax_a),str(HMax_b),str(HMax_c),str(HMax_d)]):<16}{reset}{format(HMax_a, '08b')} {format(HMax_b, '08b')} {format(HMax_c, '08b')} {format(HMax_d, '08b')}")
+        input("  Press Enter to exit")
