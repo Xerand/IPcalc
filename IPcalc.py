@@ -5,7 +5,9 @@
 viola = "\033[35m"
 giallo = "\033[33m"
 verde = "\033[32m"
+rosso = "\033[31m"
 reset = "\033[0m"
+errore = f"  {rosso}IP in formato non corretto{reset}\n"
 
 
 print(f"""┌─{viola}[ I P w i z a r d ]{reset}──────────────────────────────────────┐
@@ -14,9 +16,14 @@ print(f"""┌─{viola}[ I P w i z a r d ]{reset}──────────�
 
 while True:
     IP = input("  Inserisci IP nella forma <>.<>.<>.<>/<>: ")
-    parts = IP.split('.')
-    IPa, IPb, IPc, IPd_cidr = parts
-    IPd, cidr = IPd_cidr.split('/')
+    
+    try:
+        parts = IP.split('.')
+        IPa, IPb, IPc, IPd_cidr = parts
+        IPd, cidr = IPd_cidr.split('/')
+    except:
+        print(errore) 
+        continue
 
     try:
         IPa = int(IPa)
@@ -25,11 +32,11 @@ while True:
         IPd = int(IPd)
         cidr = int(cidr)
     except:
-        print("IP in formato non corretto\n") 
+        print(errore) 
         continue
     
     if (IPa > 256 or IPb > 256 or IPc > 256 or IPd > 256 or cidr > 32):
-        print("IP in formato non corretto\n") 
+        print(errore) 
     else:
         break;
 
