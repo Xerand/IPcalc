@@ -10,9 +10,9 @@ reset = "\033[0m"
 errore = f"  {rosso}IP in formato non corretto{reset}\n"
 
 
-print(f"""┌─{viola}[ I P w i z a r d ]{reset}──────────────────────────────────────┐
+print(f"""\n┌─{viola}[ I P w i z a r d ]{reset}──────────────────────────────────────┐
 │ Network toolkit  •  CIDR / Netmask / Network / Broadcast │
-└──────────────────────────────────────────────────────────┘""")
+└──────────────────────────────────────────────────────────┘\n""")
 
 while True:
     IP = input("  Inserisci IP nella forma <>.<>.<>.<>/<>: ")
