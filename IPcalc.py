@@ -124,4 +124,4 @@ else:
         HMax_c = Bc
         HMax_d = Bd - 1
 
-        print(f"  {giallo}{'HostMax:':<12}{verde}{'.'.join([str(HMax_a),str(HMax_b),str(HMax_c),str(HMax_d)]):<16}{reset}{format(HMax_a, '08b')} {format(HMax_b, '08b')} {format(HMax_c, '08b')} {format(HMax_d, '08b')}")
+        print(f"  {giallo}{'HostMax:':<12}{verde}{'.'.join([str(HMax_a),str(HMax_b),str(HMax_c),str(HMax_d)]):<16}{reset}{format(HMax_a, '08b')} {format(HMax_b, '08b')} {format(HMax_c, '08b')} {format(HMax_d, '08b')}\n")
